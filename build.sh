@@ -22,5 +22,7 @@ rm -rf \
 find ./target/ -path '*/__pycache__/*' -delete
 find ./target/ -type d -name '__pycache__' -empty -delete
 
-# Create the final package
-tar -C target/ -cvf builds/ansible-$VERSION.tar.gz .
+# Create the final package and remove stage area
+mv target/ ansible-$VERSION/
+tar -cvf builds/ansible-$VERSION.tar.gz ansible-$VERSION
+rm -rf ansible-$VERSION/

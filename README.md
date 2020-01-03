@@ -24,6 +24,16 @@ Ansible Portable releases use the Ansible version so if you download the
 
 [1]: https://github.com/palazzem/ansible-portable/releases
 
+### Use other Scripts
+
+To use other scripts such as `ansible-playbook`, you need to create a symlink with
+the script name:
+
+```bash
+$ cd ansible-2.9.2/
+$ ln -s ansible ansible-playbook
+```
+
 ## Requirements
 
 Ansible Portable requires:
@@ -62,5 +72,11 @@ $ pip-compile requirements.in
 
 We accept external contributions even though the project is mostly designed for
 [personal needs](http://hanzo.sh). If you think the build system can be done better,
-feel free to open
-a GitHub issue and to discuss your suggestion.
+feel free to open a GitHub issue and to discuss your suggestion.
+
+If you want to review the code and see what it does, you can check:
+* `Dockerfile` that prepares an `archlinux/base` container with dependencies to
+  prepare the archive
+* `requirements.txt` that includes what you are going to include in the
+  archive
+* `build.sh` that installs Ansible in a folder and prepares the archive in `builds/`

@@ -9,4 +9,4 @@ RUN pacman --noconfirm -Sy \
 COPY . /builder
 WORKDIR /builder
 
-CMD /bin/bash
+CMD /bin/bash build.sh

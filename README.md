@@ -8,9 +8,9 @@ that can be used on any (Linux) host without installing any requirement.
 To use it, download the latest package from the [release page][1] and run:
 
 ```bash
-# Extracts Ansible in ansible-2.9.2/ folder and runs a test command
-$ tar -xf ansible-2.9.2.tar.gz
-$ PYTHONPATH=ansible-2.9.2 python ansible-2.9.2/ansible localhost -m ping
+# Extracts Ansible in ansible-2.14.3/ folder and runs a test command
+$ tar -xf ansible-2.14.3.tar.gz
+$ PYTHONPATH=ansible-2.14.3 python ansible-2.14.3/ansible adhoc localhost -m ping
 ```
 
 It outputs the Ansible task result:
@@ -22,7 +22,7 @@ localhost | SUCCESS => {
 ```
 
 Ansible Portable releases use the Ansible version so if you download the
-`ansible-2.9.2.tar.gz` file, you are using Ansible version 2.9.2.
+`ansible-2.14.3.tar.gz` file, you are using Ansible version 2.14.3.
 
 [1]: https://github.com/palazzem/ansible-portable/releases
 
@@ -32,7 +32,7 @@ To use other scripts such as `ansible-playbook`, you need to create a symlink wi
 the script name:
 
 ```bash
-$ cd ansible-2.9.2/
+$ cd ansible-2.14.3/
 $ ln -s ansible ansible-playbook
 ```
 

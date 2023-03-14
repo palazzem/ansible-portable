@@ -14,7 +14,6 @@ poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 # Install Ansible in the target folder
 pip install -r requirements.txt --no-compile --target ./target/
-cp ./target/ansible/cli/scripts/ansible_cli_stub.py ./target/ansible/__main__.py
 VERSION=$(PYTHONPATH=./target/ python3 -c "import ansible; print(ansible.__version__)")
 
 # Cleaning

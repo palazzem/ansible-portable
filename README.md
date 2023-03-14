@@ -1,5 +1,7 @@
 # Ansible Portable
 
+[![Builder](https://github.com/palazzem/ansible-portable/actions/workflows/builder.yaml/badge.svg?branch=main)](https://github.com/palazzem/ansible-portable/actions/workflows/builder.yaml)
+
 This repository include a Docker image and a build script to prepare an Ansible archive
 that can be used on any (Linux) host without installing any requirement.
 

@@ -9,7 +9,7 @@ packages = [{include = "ansible_portable"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-ansible = "2.9.2"
+ansible = "7.0.0"
 
 
 [build-system]

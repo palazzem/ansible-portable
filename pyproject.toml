@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ansible-portable"
+version = "2.9.2"
+description = "Make Ansible portable with no dependencies!"
+authors = ["Manu Palazzetti <emanuele.palazzetti@gmail.com>"]
+license = "BSD 3-Clause"
+readme = "README.md"
+packages = [{include = "ansible_portable"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ansible = "2.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

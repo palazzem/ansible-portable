@@ -51,22 +51,18 @@ machine or CI environment. To use it, build the image and run it via:
 ```bash
 $ git clone git@github.com:palazzem/ansible-portable.git
 $ docker build -t ansible-builder .
-$ docker run -ti --rm -v ./builds:/builder/builds ansible-builder
+$ docker run -ti --rm -v $PWD/builds:/builder/builds ansible-builder
 ```
 
 After `docker` finishes, you can find the archive in the `builds/` directory.
 
 ## Update Ansible
 
-If you want to update Ansible or dependencies, it's enough to clone this repository and:
+If you want to update Ansible, it's enough to use `poetry`:
 
-1. Delete `requirements.txt`
-2. Use `pip-tools` to get the latest from Ansible:
 ```bash
-$ pip install pip-tools
-$ pip-compile requirements.in
+$ poetry update
 ```
-3. Create a PR with the new `requirements.txt`
 
 ## Contributing
 
@@ -77,6 +73,5 @@ feel free to open a GitHub issue and to discuss your suggestion.
 If you want to review the code and see what it does, you can check:
 * `Dockerfile` that prepares an `archlinux/base` container with dependencies to
   prepare the archive
-* `requirements.txt` that includes what you are going to include in the
-  archive
+* `pyproject.toml` that includes what you are going to include in the archive
 * `build.sh` that installs Ansible in a folder and prepares the archive in `builds/`

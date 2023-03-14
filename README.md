@@ -51,7 +51,7 @@ machine or CI environment. To use it, build the image and run it via:
 ```bash
 $ git clone git@github.com:palazzem/ansible-portable.git
 $ docker build -t ansible-builder .
-$ docker run -ti --rm -v ./builds:/builder/builds ansible-builder
+$ docker run -ti --rm -v $PWD/builds:/builder/builds ansible-builder
 ```
 
 After `docker` finishes, you can find the archive in the `builds/` directory.

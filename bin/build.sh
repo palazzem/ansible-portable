@@ -7,6 +7,11 @@ set -ex
 rm -rf target/
 mkdir -p target/
 
+# Export Python requirements
+# NOTE: Poetry has no options to install in a target folder. See: https://github.com/python-poetry/poetry/issues/1937
+pip install poetry
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+
 # Install Ansible in the target folder
 pip install -r requirements.txt --no-compile --target ./target/
 cp ./target/ansible/cli/scripts/ansible_cli_stub.py ./target/ansible/__main__.py

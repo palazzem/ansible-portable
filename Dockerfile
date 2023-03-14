@@ -8,4 +8,4 @@ RUN pacman --noconfirm -Sy \
 COPY . /builder
 WORKDIR /builder
 
-CMD /bin/bash build.sh
+CMD /bin/bash bin/build.sh
